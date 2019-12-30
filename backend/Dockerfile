@@ -9,6 +9,7 @@ WORKDIR /safira/safira_api
 
 RUN ./gradlew clean && \
     ./gradlew assemble && \
-    mv build/libs/safira_api-0.1.war /usr/local/tomcat/webapps/safira.war
+    mv build/libs/safira_api-0.1.war /usr/local/tomcat/webapps/safira.war && \
+    rm -rf /safira
 
 EXPOSE 8080
