@@ -2,12 +2,14 @@ FROM node:lts-alpine
 
 WORKDIR /safira
 RUN apk add git && \
-    git clone https://github.com/rafante/safiralab_app 
+    git clone https://github.com/rafante/safiralab_app
 
 WORKDIR /safira/safiralab_app
 
-RUN yarn
+RUN yarn global add serve && \
+    yarn && \
+    yarn build
 
-CMD yarn start
+CMD serve -s build
 
-EXPOSE 3000
+EXPOSE 5000

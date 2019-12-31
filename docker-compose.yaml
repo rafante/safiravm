@@ -49,7 +49,7 @@ services:
         networks: 
             - frontend
         ports: 
-            - 80:3000
+            - 3000:3000
 networks:
     frontend:
         driver: bridge
