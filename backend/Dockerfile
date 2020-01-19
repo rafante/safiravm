@@ -16,4 +16,4 @@ RUN mv server.xml /usr/local/tomcat/conf/server.xml && \
     mv build/libs/safira_api-0.1.war /usr/local/tomcat/webapps/safira.war && \
     rm -rf /safira
 
-EXPOSE 8080
+EXPOSE 8080 22
