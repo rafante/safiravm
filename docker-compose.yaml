@@ -25,7 +25,7 @@ services:
         restart: always
         ports: 
             - 8080:8080
-            - 2201:22
+            - "2201:22"
         depends_on: 
             - "mysql"
     safira-front:
@@ -36,7 +36,7 @@ services:
             - frontend
         ports: 
             - 5000:5000
-            - 2202:22
+            - "2202:22"
     # registry:
     #     image: registry:2
     #     container_name: docker-registry-container
